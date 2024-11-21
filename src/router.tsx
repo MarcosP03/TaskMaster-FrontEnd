@@ -3,8 +3,9 @@ import AuthLayout from "@/layouts/AuthLayout";
 import LoginView from "@/views/auth/LoginView";
 import RegisterView from "@/views/auth/RegisterView";
 import ForgotPasswordView from "@/views/auth/ForgotPasswordView";
-import AppLayout from "./layouts/AppLayout";
-import DashboardView from "./views/DashboardView";
+import AppLayout from "@/layouts/AppLayout";
+import DashboardView from "@/views/DashboardView";
+import NewProjectView from "@/views/projects/NewProjectView";
 
 function Router() {
   return (
@@ -20,6 +21,7 @@ function Router() {
         </Route>
         <Route element={<AppLayout />}>
           <Route path="/" element={<DashboardView />} />
+          <Route path="/projects/new-project" element={<NewProjectView />} />
         </Route>
       </Routes>
     </BrowserRouter>
